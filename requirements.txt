@@ -1,0 +1,10 @@
+langchain
+langchain-community
+llama-parse
+fastembed
+chromadb
+google-generativeai
+python-dotenv
+langchain-groq
+fastembed
+unstructured[pdf]
