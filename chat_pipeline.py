@@ -47,11 +47,18 @@ class QARetrieval:
 # Create an instance of QARetrieval
 qa_retrieval = QARetrieval(vectorstore=vectorstore, chat_model=chat_model)
 
-# Prompting the user to enter the question
-question = input("Please enter your question: ")
+while True:
+    # Prompting the user to enter the question
+    user_query = input("Please enter your question: If you want to close, say 'exit'")
 
-# Performing the QA retrieval
-response = qa_retrieval.perform_qa(question)
+    if user_query.lower() == "exit":
+        print("Exiting")
+        break
 
+    # Performing the QA retrieval
+    try:
+        response = qa_retrieval.perform_qa(user_query)
+        print("Response:", response)
+    except Exception as e:
+        print(f"An error occurred during QA retrieval: {e}")
 
-print("Response:", response)
