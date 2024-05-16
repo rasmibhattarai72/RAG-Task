@@ -49,7 +49,7 @@ qa_retrieval = QARetrieval(vectorstore=vectorstore, chat_model=chat_model)
 
 while True:
     # Prompting the user to enter the question
-    user_query = input("Please enter your question: If you want to close, say 'exit'")
+    user_query = input("Please enter your question: If you want to close, say 'exit':  ")
 
     if user_query.lower() == "exit":
         print("Exiting")
